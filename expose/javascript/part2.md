@@ -55,3 +55,25 @@
     F. Returns true because forcing conversion of `Boolean(2)` which is done before the comparison makes it true since it's not zero so they become equal.
 
 15. `==` checks equality with type conversion, while `===` is strict so it checks equality without type conversion.
+
+16. ```js
+    for (stat in statistics) {
+        if (statistics[stat] %2 != 0 || stat[0] == 'r') {
+            console.log(`${statistics[stat]}`);
+        }
+    }
+    ```
+
+17. The result of calling the function will be that it returns a new array, of equivalent length to the input array, except that each value is replaced with its double. This is because we are calling `modifyArray` with the `array` parameter as `[1,2,3]` and the `callback` as `doSomething`. `modifyArray` then creates a new array, and for each value in `array` it writes the value of `callback` on that value. This is the `doSomething` function that just returns the double of its input.
+
+18. ```js
+    function printTime() {
+        let d = new Date();
+        let time = d.toLocaleTimeString();
+        console.log(time);
+    }
+    
+    setInterval(printTime,1000);
+    ```
+
+19. The code first prints the numbers 1, 4, and 3 in that order in new lines for each, then it delays for a second and prints 2 on the last line.
